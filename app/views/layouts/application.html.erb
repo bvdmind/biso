@@ -14,16 +14,37 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Large title
+            Bahamas International Spearfishing Open <%= Time.now.year + 1 %>
           </h1>
           <h2 class="subtitle">
             Large subtitle
           </h2>
         </div>
       </div>
+
+      <div class="hero-foot">
+        <%= render 'layouts/navigation' %>
+      </div>
     </section>
 
-    <%= render 'layouts/navigation' %>
-    <%= yield %>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+        </div>
+
+        <div class="column is-three-quarters">
+          <div class="content is-medium">
+            <div class="section">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+        </div>
+      </div>
+    </div>
+
+    <%= render 'layouts/footer' %>
   </body>
 </html>
